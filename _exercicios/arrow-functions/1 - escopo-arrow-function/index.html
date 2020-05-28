@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>titulo</h1>
+    <p>paragrafo</p>
+    <div>dados</div>
+
+    <script>
+/* exemplo 1
+        console.log(this)
+
+        let exibeConteudo = () => {
+            console.log(this)
+            alert(this.textContent)
+        }
+
+        $ = document.querySelector.bind(document)
+        $('h1').addEventListener('click', exibeConteudo)
+        $('p').addEventListener('click', exibeConteudo)
+        $('div').addEventListener('click', exibeConteudo)
+*/
+
+        /** exemplo 2 */
+        class SistemaImpressao {
+
+            constructor() {
+                this._codigo = 2
+            }
+
+            imprime(nomes) {
+                nomes.forEach((nome) => {
+                    console.log(this)
+                    console.log(`${this._codigo}: ${nome}`)
+                })
+            }
+        }
+
+        let nomes = ['Flavio','Nico','Douglas']
+        let si = new SistemaImpressao()
+        si.imprime(nomes)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let carro = {
+            velocidade: 100,
+            acelera: () => {
+                console.log(this)                
+                console.log(`Carro a ${this.velocidade}`)
+            }
+        }
+        carro.acelera()
+    </script>
+</body>
+</html>
